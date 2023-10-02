@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*::selection {
+    color: #fff;
+    background: #fff;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #F7F7F7;
+}
+
+#nav {
+    /* background: #b1b1b1; */
+    height: 100px;
+    width: 100%;
+    padding: 0 2.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 999;
+}
+
+#nav #left-logo {
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    z-index: 999;
+
+}
+
+#nav #left-logo img {
+    height: 100%;
+    width: auto;
+    z-index: 999;
+
+}
+
+#nav #right-links {
+    height: 100%;
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+}
+
+#nav #right-links a {
+    margin-left: 7vw;
+    text-decoration: none;
+    color: #999;
+}
+
+#nav #link-icon {
+    background: #000;
+    color: #F7F7F7;
+    padding: 1vw 2.5vw;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5vw;
+    z-index: 999;
+}
+
+#nav #left-logo img,
+#nav #link-icon {
+    z-index: 999;
+}
+
+#cursor {
+    width: 150px;
+    height: 150px;
+    background: #000;
+    opacity: .5;
+    border-radius: 50%;
+    position: fixed;
+    transform: translate((-50%, -50%));
+    scale: 0;
+}
+
+#page1 {
+    min-height: 100vw;
+    position: relative;
+    width: 100%;
+    padding: 0 .5vw;
+    padding-top: 25vh;
+}
+
+#page1 h1 {
+    font-size: 20vw;
+    font-family: fantasy;
+    text-transform: uppercase;
+    line-height: 20vw;
+    font-weight: 100;
+    letter-spacing: 1vw;
+    overflow: hidden;
+
+}
+
+#video-container {
+    height: 100vh;
+    width: 100%;
+}
+
+#video-container video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#video-container #play {
+    padding: 2.5vw 2vw;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+    font-size: 2vw;
+    text-transform: uppercase;
+    font-family: fantasy;
+    position: absolute;
+    top: 45%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    background: #000;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1vw;
+    justify-content: space-between;
+}
+
+#page2 .elm {
+    height: 100%;
+    width: 31%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#page2 .elm img {
+    object-fit: cover;
+    height: -webkit-fill-available;
+    /* scale: 1.1; */
+    box-shadow: 0 0 10px 5px #999;
+}
+
+#page2 .elm .innerboxes {
+    position: absolute;
+    width: 70%;
+    height: 60px;
+    background: rgba(255, 255, 255, .5);
+    border-radius: 50px;
+    z-index: 9;
+    transition: height ease .5s;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: cursive;
+}
+
+#page2 .elm .innerboxes:hover {
+    height: 150px;
+    background: rgba(0, 0, 0, .3);
+    font-family: fantasy;
+    text-align: justify;
+}
+
+#page2 .elm .innerboxes:hover h3 a {
+    color: azure !important;
+}
+
+#page2 .elm .innerboxes .left {
+    width: 50%;
+    text-align: center;
+}
+
+#page2 .elm .innerboxes .right {
+    width: 50%;
+    text-align: center;
+}
+
+#page3 {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.3);
+
+}
+
+.child {
+    height: 70%;
+    width: 50%;
+    padding: 2vw 6vw;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.child img {
+    height: 100%;
+    object-fit: cover;
+    transition: all ease-in-out .5s;
+    animation: rotat 5s linear infinite;
+}
+
+@keyframes rotat {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    50% {
+        transform: rotateY(-30deg);
+        animation-delay: .5s;
+    }
+
+    100% {
+        transform: rotateY(0deg);
+    }
+}
+
+#child1 {
+    padding: 1.5vh 2.5vw;
+}
+
+#child3 {
+    padding: 2vw 8vw
+}
